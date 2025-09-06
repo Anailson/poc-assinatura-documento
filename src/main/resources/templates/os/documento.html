@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ordem de Serviço</title>
+    <style type="text/css">
+        body { font-family: sans-serif; margin: 32px; }
+        h1 { margin-bottom: 4px; }
+        .subtle { color:#666; font-size:.9rem; }
+        .block { margin: 14px 0; }
+        .label { color:#555; font-size:.9rem; }
+        .value { font-weight:600; }
+        .note { margin-top:24px; padding:10px; border:1px solid #ddd; background:#f8f8f8; }
+    </style>
+</head>
+<body>
+<h1>Ordem de Serviço</h1>
+<div class="subtle" th:text="${'OS #' + os.id}">OS #1</div>
+
+<div class="block">
+    <div class="label">Ação de Controle</div>
+    <div class="value" th:text="${acao.titulo}">Título da Ação</div>
+</div>
+
+<div class="block">
+    <div class="label">Responsável</div>
+    <div class="value" th:text="${os.responsavel}">Fulano de Tal</div>
+</div>
+
+<div class="block">
+    <div class="label">Descrição</div>
+    <div th:text="${os.descricao}">Texto descritivo…</div>
+</div>
+
+<div class="note">
+    Documento gerado apenas para <b>visualização</b>. Não possui assinatura digital nem hash.
+</div>
+</body>
+</html>
